@@ -2,12 +2,11 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import { PreloadedState } from 'redux';
 import userPreferencesReducer from '@/store/slices/userPreferencesSlice';
 import contentReducer from '@/store/slices/contentSlice';
 import favoritesReducer from '@/store/slices/favoritesSlice';
 
-export function createTestStore(preloadedState?: PreloadedState<any>) {
+export function createTestStore(preloadedState?: any) {
   return configureStore({
     reducer: {
       userPreferences: userPreferencesReducer,
