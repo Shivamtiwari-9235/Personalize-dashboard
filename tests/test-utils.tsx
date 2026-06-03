@@ -12,7 +12,7 @@ export function createTestStore(preloadedState?: any) {
       userPreferences: userPreferencesReducer,
       content: contentReducer,
       favorites: favoritesReducer,
-    } as const,
+    } as any,
     preloadedState,
   });
 }
